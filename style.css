@@ -1,12 +1,10 @@
-It sounds like you need to fix the low contrast issue where your title is invisible against the white background. The most common and recommended fix for the regenerated design is to ensure the header section has a dark background and the title text is white.
-
-Here is the regenerated style.css file, with the fix explicitly highlighted in the Hero Section to ensure the title is visible and the design is attractive.
+I can certainly provide the complete, revised style.css file. This version incorporates the necessary fixes to ensure the layout isn't "messed up," centers the content correctly, and adds the requested border to each instructor box for better visual definition.
 
 CSS
 
 /* * Carnatic Music Club - style.css 
  * Modern, clean, and responsive styling.
- * FIX: Ensuring the header has a dark background and white text for visibility.
+ * Includes fixes for centering, layout, and adds borders to team member cards.
  */
 
 /* ---------------------------------------------------- */
@@ -51,20 +49,20 @@ h1, h2, h3, h4 {
 }
 
 /* ---------------------------------------------------- */
-/* 2. Hero Section - The Visibility Fix is HERE! */
+/* 2. Hero Section (Header) - Fixes Visibility */
 /* ---------------------------------------------------- */
 
 .hero-section {
-    /* FIX: Setting a dark background ensures the white title is visible */
-    background-color: var(--color-primary); /* #5c3a88 (Deep Purple) */
-    color: white; /* Sets the default text color for the section to white */
+    /* Ensures dark background for contrast */
+    background-color: var(--color-primary); 
+    color: white; 
     padding: 80px 20px;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .hero-title {
-    /* Ensures the title color is explicitly white for contrast */
+    /* Ensures title color is white */
     color: white; 
     font-size: clamp(2.5em, 8vw, 4em);
     margin-bottom: 0.1em;
@@ -74,7 +72,7 @@ h1, h2, h3, h4 {
     font-size: clamp(1em, 3vw, 1.4em);
     font-style: italic;
     opacity: 0.9;
-    color: white; /* Ensures subtitle is also visible */
+    color: white;
 }
 
 /* ---------------------------------------------------- */
@@ -90,7 +88,7 @@ h1, h2, h3, h4 {
 
 .slides {
     display: flex;
-    transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Smoother transition curve */
+    transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94); 
 }
 
 .slides img {
@@ -100,7 +98,6 @@ h1, h2, h3, h4 {
     flex-shrink: 0;
 }
 
-/* Mobile Adjustments */
 @media (max-width: 768px) {
     .slides img {
         height: 300px; 
@@ -108,7 +105,7 @@ h1, h2, h3, h4 {
 }
 
 /* ---------------------------------------------------- */
-/* 4. About & Stats Section */
+/* 4. About & Stats Section - Fixes Centering */
 /* ---------------------------------------------------- */
 
 .about-us {
@@ -118,13 +115,13 @@ h1, h2, h3, h4 {
 
 .story-text {
     max-width: 900px;
-    margin: 15px auto;
+    margin: 15px auto; /* Centers the text block */
     text-align: center;
 }
 
 .stats-grid {
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Centers the stat boxes */
     gap: 30px;
     margin-top: 30px;
     flex-wrap: wrap; 
@@ -134,7 +131,7 @@ h1, h2, h3, h4 {
     font-size: 1.1em;
     font-weight: 600;
     color: var(--color-primary);
-    background-color: #f2eef6; /* Light purple background */
+    background-color: #f2eef6; 
     padding: 12px 25px;
     border-radius: 10px;
     text-align: center;
@@ -146,7 +143,7 @@ h1, h2, h3, h4 {
 }
 
 /* ---------------------------------------------------- */
-/* 5. Accordion & Team Section */
+/* 5. Accordion & Team Section - Fixes Layout and Adds Borders */
 /* ---------------------------------------------------- */
 
 /* Accordion Button Style */
@@ -176,7 +173,7 @@ h1, h2, h3, h4 {
     background-color: white;
     overflow: hidden;
     max-height: 0; 
-    transition: max-height 0.4s ease-in-out; /* Smooth open/close */
+    transition: max-height 0.4s ease-in-out; 
 }
 
 .team-section {
@@ -194,7 +191,7 @@ h1, h2, h3, h4 {
 /* Team Grid Layout */
 .team-grid {
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Centers the row of cards */
     flex-wrap: wrap;
     gap: 30px;
     padding: 10px 0;
@@ -203,10 +200,18 @@ h1, h2, h3, h4 {
 /* Member Card Styling */
 .member {
     flex-basis: 250px; 
+    /* FIX: Uses flex to center content within the card */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     text-align: center;
     padding: 25px;
     border-radius: 12px;
     background: #ffffff;
+    
+    /* FIX: Added subtle border for visual separation */
+    border: 1px solid #e0e0e0; 
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease-out, box-shadow 0.3s;
 }
@@ -219,7 +224,7 @@ h1, h2, h3, h4 {
 .member img {
     width: 120px;
     height: 120px;
-    border-radius: 50%; /* Circular profile pictures */
+    border-radius: 50%; 
     object-fit: cover;
     margin-bottom: 15px;
     border: 4px solid var(--color-highlight); 
@@ -239,8 +244,8 @@ h1, h2, h3, h4 {
 /* Founder Highlight Style */
 .founder-card {
     background-color: #fff8e1; /* Light gold background */
-    border: 2px solid var(--color-highlight);
-    transform: scale(1.05); /* Make it stand out */
+    border: 2px solid var(--color-highlight); /* Thicker border to stand out */
+    transform: scale(1.05); 
 }
 
 .founder-card:hover {
