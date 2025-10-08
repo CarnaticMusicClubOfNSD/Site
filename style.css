@@ -1,9 +1,12 @@
-To complement the regenerated, modern HTML, here is the complete style.css file. It incorporates a cleaner aesthetic, better responsiveness, and specific styling to highlight the founder and the dynamic nature of the club.
+It sounds like you need to fix the low contrast issue where your title is invisible against the white background. The most common and recommended fix for the regenerated design is to ensure the header section has a dark background and the title text is white.
+
+Here is the regenerated style.css file, with the fix explicitly highlighted in the Hero Section to ensure the title is visible and the design is attractive.
 
 CSS
 
 /* * Carnatic Music Club - style.css 
  * Modern, clean, and responsive styling.
+ * FIX: Ensuring the header has a dark background and white text for visibility.
  */
 
 /* ---------------------------------------------------- */
@@ -48,27 +51,30 @@ h1, h2, h3, h4 {
 }
 
 /* ---------------------------------------------------- */
-/* 2. Hero Section */
+/* 2. Hero Section - The Visibility Fix is HERE! */
 /* ---------------------------------------------------- */
 
 .hero-section {
-    background-color: var(--color-primary);
-    color: white;
+    /* FIX: Setting a dark background ensures the white title is visible */
+    background-color: var(--color-primary); /* #5c3a88 (Deep Purple) */
+    color: white; /* Sets the default text color for the section to white */
     padding: 80px 20px;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .hero-title {
+    /* Ensures the title color is explicitly white for contrast */
+    color: white; 
     font-size: clamp(2.5em, 8vw, 4em);
     margin-bottom: 0.1em;
-    color: white;
 }
 
 .hero-subtitle {
     font-size: clamp(1em, 3vw, 1.4em);
     font-style: italic;
     opacity: 0.9;
+    color: white; /* Ensures subtitle is also visible */
 }
 
 /* ---------------------------------------------------- */
