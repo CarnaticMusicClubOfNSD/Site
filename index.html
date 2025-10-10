@@ -148,71 +148,78 @@
     </section>
   </div>
 
-	<!-- Accordion: Student Impact -->
 <button class="accordion section-gray">Our Impact</button>
 <div class="accordion-content show">
   <section class="impact">
-    <h3 style="text-align:center; margin-bottom:20px; font-size:1.4em; color:#333;">
-      Students Taught by Year & School
+    <h3 style="text-align:center; margin-bottom:20px; font-size:1.5em; color:#444;">
+      Students Taught – Year Over Year Growth
     </h3>
-    <div class="impact-table-wrapper" style="overflow-x:auto;">
-      <table class="impact-table" style="width:100%; border-collapse:collapse; border-radius:12px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
-        <thead style="background:linear-gradient(90deg, #6a11cb 0%, #2575fc 100%); color:white;">
-          <tr>
-            <th style="padding:12px;">Year</th>
-            <th style="padding:12px;">School</th>
-            <th style="padding:12px;">Students</th>
-            <th style="padding:12px;">Instructors</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr style="background-color:#fafafa;">
-            <td style="padding:12px;">2022–23</td>
-            <td>Canyon Creek Elementary</td>
-            <td>8</td>
-            <td>Shreya</td>
-          </tr>
-          <tr>
-            <td style="padding:12px;">2023–24</td>
-            <td>Canyon Creek Elementary</td>
-            <td>10</td>
-            <td>Shreya</td>
-          </tr>
-          <tr style="background-color:#fafafa;">
-            <td style="padding:12px;">2024–25</td>
-            <td>Canyon Creek Elementary</td>
-            <td>23</td>
-            <td>Shreya, Sohan</td>
-          </tr>
-          <tr>
-            <td style="padding:12px;">2024–25</td>
-            <td>Fernwood Elementary</td>
-            <td>18</td>
-            <td>Meenakshi</td>
-          </tr>
-          <tr style="background-color:#fafafa;">
-            <td style="padding:12px;">2025–26</td>
-            <td>Fernwood Elementary</td>
-            <td>12</td>
-            <td>Meenakshi, Nayana</td>
-          </tr>
-          <tr>
-            <td style="padding:12px;">2025–26</td>
-            <td>Canyon Creek Elementary</td>
-            <td><em>WIP</em></td>
-            <td>Shreya, Aditi, Swathi</td>
-          </tr>
-          <tr style="background-color:#fafafa;">
-            <td style="padding:12px;">2025–26</td>
-            <td>Maywood Hills Elementary</td>
-            <td><em>WIP</em></td>
-            <td>Sohan, Satvik</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <canvas id="impactChart" style="max-width:900px; margin: 0 auto; display:block;"></canvas>
   </section>
 </div>
+
+<!-- Chart.js Library -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  const ctx = document.getElementById('impactChart').getContext('2d');
+
+  // Data
+  const years = ["2022–23", "2023–24", "2024–25", "2025–26"];
+  const students = [8, 10, 41, 53]; // yearly totals (2024–25 = 23+18, 2025–26 = 12 + WIP + WIP, using 12 confirmed)
+  const cumulative = students.map((sum => value => sum += value)(0));
+
+  new Chart(ctx, {
+    data: {
+      labels: years,
+      datasets: [
+        {
+          type: 'bar',
+          label: 'Students per Year',
+          data: students,
+          backgroundColor: ['#FFB347', '#FF7EB9', '#7BDCB5', '#CBA1FF'],
+          borderRadius: 8
+        },
+        {
+          type: 'line',
+          label: 'Cumulative Students',
+          data: cumulative,
+          borderColor: '#2575fc',
+          backgroundColor: '#2575fc',
+          borderWidth: 3,
+          fill: false,
+          tension: 0.3,
+          pointRadius: 6,
+          pointBackgroundColor: '#6a11cb'
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: {
+          position: 'top',
+          labels: {
+            font: { size: 14, family: "'Segoe UI', Tahoma, sans-serif" }
+          }
+        },
+        tooltip: {
+          backgroundColor: '#333',
+          titleColor: '#fff',
+          bodyColor: '#fff'
+        }
+      },
+      scales: {
+        y: {
+          beginAtZero: true,
+          title: { display: true, text: 'Number of Students', font: { size: 14 } }
+        },
+        x: {
+          title: { display: true, text: 'School Year', font: { size: 14 } }
+        }
+      }
+    }
+  });
+</script>
 
   <footer>
     <p>© 2025 Carnatic Music Club | Northshore School District</p>
