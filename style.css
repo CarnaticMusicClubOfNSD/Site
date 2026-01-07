@@ -180,28 +180,33 @@ header {
   border: 3px solid #b30059;
   box-shadow: 0 6px 12px rgba(179, 0, 89, 0.2);
   width:270px;
-  height:370px;
+  height:400px;
 }
 
 .instructor-highlight {
   border: 3px solid green;
   box-shadow: 0 6px 12px rgba(179, 0, 89, 0.2);
   width:250px;
-  height:320px
+  height:340px
 }
 
 .coinstructor-highlight {
   border: 3px solid blue;
   box-shadow: 0 6px 12px rgba(179, 0, 89, 0.2);
   width:250px;
-  height:320px;
+  height:340px;
 }
 
 .mentors-highlight {
   border: 3px solid yellow;
   box-shadow: 0 6px 12px rgba(179, 0, 89, 0.2);
   width:320px;
-  height:320px;
+  height:340px;
+}
+
+.timeline-image img
+{
+  width:400px
 }
 
 /* Footer */
