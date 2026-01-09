@@ -121,6 +121,36 @@ header {
   color: #560b5f;
 }
 
+.mission {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 2rem auto;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.mission h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #560b5f;
+}
+
+.curriculum {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 2rem auto;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.curriculum h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #560b5f;
+}
+
 .team-category {
   margin-bottom: 40px;
 }
