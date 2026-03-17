@@ -650,3 +650,13 @@ footer {
     bottom: 0.7rem;
   }
 }
+
+.member.shreya-highlight {
+  border-color: rgba(0, 102, 179, 1);
+  box-shadow: 0 18px 42px rgba(0, 102, 179, 0.55);
+  transform: translateY(-4px);
+}
+
+.member.shreya-highlight:hover {
+  transform: translateY(-8px) scale(1.03);
+}
