@@ -342,10 +342,36 @@ main::before {
   gap: 1.6rem;
 }
 
+.team-grid .member img {
+  height: 190px;
+  object-fit: contain;
+  background-color: #020617; 
+}
+
+.single-center .member {
+  transform: scale(1.02);
+  padding: 1.8rem 1.7rem 1.6rem;
+}
+
+/* All other members (slightly smaller by default) */
+.team-grid .member {
+  transform: scale(0.95);
+}
+
+/* Keep hover effect, just add on top of the base scale */
+.team-grid .member:hover {
+  transform: scale(0.98) translateY(-4px);
+}
+
 .single-center {
   display: flex;
   justify-content: center;
 }
+
+.single-center .member img {
+  height: 260px;
+}
+
 
 .member {
   background: var(--glass-bg);
