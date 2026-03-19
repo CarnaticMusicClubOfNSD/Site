@@ -60,13 +60,17 @@
           </div>
         </div>
       </div>
-      <div class="hero-carousel-placeholder">
-        <img
-          src="Images/Image1.jpeg"
-          alt="Carnatic Music Club class in session"
-          style="width:100%; height:100%; object-fit:cover; border-radius:20px;"
-        />
-      </div>
+     <div class="hero-carousel">
+	  <div class="carousel-container" id="carouselContainer">
+	    <img src="Images/Image1.jpeg" alt="Carnatic Music Club 1">
+	    <img src="Images/IMG_1946.jpeg" alt="Carnatic Music Club 2">
+	    <img src="Images/IMG_3049.jpeg" alt="Carnatic Music Club 3">
+	    <img src="Images/IMG_8440.jpeg" alt="Carnatic Music Club 4">
+	    <img src="Images/IMG_9149.png" alt="Carnatic Music Club 5">
+	    <img src="Images/f3358a08-5272-4b0a-936e-5d68d1b998c3.jpeg" alt="Carnatic Music Club 6">
+	    <img src="Images/Image2.png" alt="Carnatic Music Club 7">
+	  </div>
+	</div>
     </section>
 
     <section class="card-section" id="about">
@@ -208,6 +212,25 @@
         }
       });
     });
+
+	  // Carousel Logic
+const container = document.getElementById('carouselContainer');
+const slides = container.querySelectorAll('img');
+let currentIndex = 0;
+
+function showNextSlide() {
+  currentIndex++;
+  
+  if (currentIndex >= slides.length) {
+    currentIndex = 0;
+  }
+  
+  const offset = -currentIndex * 100;
+  container.style.transform = `translateX(${offset}%)`;
+}
+
+// Change image every 3.5 seconds
+setInterval(showNextSlide, 3500);
   </script>
 </body>
 </html>
