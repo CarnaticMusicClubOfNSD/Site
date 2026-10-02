@@ -569,3 +569,57 @@ footer {
     padding: 1.5rem 0.9rem 1.3rem;
   }
 }
+
+/* ANNOUNCEMENT BADGE */
+.announcement-badge {
+  display: inline-block;
+  margin-top: 1.2rem;
+  padding: 0.55rem 1.1rem;
+  border-radius: 999px;
+  background: rgba(34, 211, 238, 0.12);
+  border: 1px solid rgba(34, 211, 238, 0.6);
+  color: #a5f3fc;
+  font-size: 0.88rem;
+  box-shadow: 0 0 18px rgba(34, 211, 238, 0.25);
+}
+
+.announcement-badge a {
+  color: #e5f0ff;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* PROGRAM LEVELS */
+.level-heading {
+  font-size: 1.05rem;
+  color: #e5f0ff;
+  margin: 1.4rem 0 0.6rem;
+  letter-spacing: 0.04em;
+}
+
+.level-heading:first-child {
+  margin-top: 0;
+}
+
+.new-tag {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #001b33;
+  background: linear-gradient(90deg, #33d17a, #22d3ee);
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+}
+
+/* FOUNDER MENTOR LINE */
+.mentor-line {
+  font-size: 0.82rem;
+  color: #a5f3fc;
+  margin-top: 0.35rem;
+  font-style: italic;
+}
