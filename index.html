@@ -45,7 +45,7 @@
           A student-led initiative bringing Carnatic music education to young learners across the
           Northshore School District through community, culture, and creativity.
 </p>
-<div class="announcement-badge">✨ <strong>New:</strong> Level 2 training now open — <a href="#curriculum" id="level2-link">see curriculum</a></div>
+<div class="announcement-badge">✨ <span class="new-tag">New! </span> Level 2 training now open — <a href="#curriculum" id="level2-link">See curriculum</a></div>
 <div class="hero-stats">
           <div class="stat-card">
             <span class="stat-number">90+</span>
@@ -202,7 +202,7 @@
     <li><strong>Vocal Technique:</strong> Warmups and pitch accuracy.</li>
     <li><strong>Showcase:</strong> Live performance for families and peers.</li>
   </ul>
-  <h4 class="level-heading">Level 2 — Intermediate <span class="new-tag">New!</span></h4>
+  <h4 class="level-heading" id="level2">Level 2 — Intermediate <span class="new-tag">New!</span></h4>
    <p>Students follow an <strong>11-week program</strong> focusing on:</p>
 			 <ul class="modern-list">
     <li><strong>Intermediate exercises:</strong> For students who have completed Level 1, or have basic Carnatic training will learn Janta swaras (double-note patterns).</li>
@@ -230,7 +230,7 @@
     });
 
 	  document.getElementById('level2-link').addEventListener('click', () => {
-  const header = document.getElementById('curriculum');
+  const header = document.getElementById('level2');
   const panel = header.nextElementSibling;
   if (!panel.classList.contains('open')) header.click();
 });
