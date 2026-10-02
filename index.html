@@ -44,8 +44,9 @@
         <p>
           A student-led initiative bringing Carnatic music education to young learners across the
           Northshore School District through community, culture, and creativity.
-        </p>
-        <div class="hero-stats">
+</p>
+<div class="announcement-badge">✨ <strong>New:</strong> Level 2 training now open — <a href="#curriculum" id="level2-link">see curriculum</a></div>
+<div class="hero-stats">
           <div class="stat-card">
             <span class="stat-number">90+</span>
             <span class="stat-label">Students</span>
@@ -82,8 +83,13 @@
         for Carnatic music with the younger generation. What began as a small after-school club at
         Canyon Creek Elementary has grown to inspire <strong>90+ students</strong> through a
         district-wide initiative.
-      </p>
-      <br />
+</p>
+<p>
+  Shreya personally <strong class="highlight-navy">trains and mentors the club's youth
+  instructors</strong>, building a youth-led teaching model that sustains the program
+  across all four schools.
+</p>
+<br />
       <p>
         The club is dedicated to making <strong>Indian classical music accessible</strong>, fostering
         musical skills alongside confidence and cultural pride. Our goals include:
@@ -115,7 +121,8 @@
             <div class="member shreya-highlight">
               <img src="Images/IMG_3228.jpeg" alt="Shreya Battula" />
               <h4>Shreya Battula</h4>
-              <p class="role">Founder, Lead Instructor</p>
+<p class="role">Founder, Lead Instructor</p>
+<p class="mentor-line">Trains &amp; mentors all youth instructors</p>
             </div>
           </div>
 
@@ -188,14 +195,19 @@
       </button>
       <div class="accordion-panel">
         <div class="content-box">
-          <p>Students follow an <strong>11-week program</strong> focusing on:</p>
-          <ul class="modern-list">
-            <li><strong>Basic Theory:</strong> Understanding the structure of compositions.</li>
-            <li><strong>Vocal Technique:</strong> Warmups and pitch accuracy.</li>
-            <li><strong>Sarali Swaras:</strong> Core beginner sequences.</li>
-            <li><strong>Showcase:</strong> Live performance for families and peers.</li>
-          </ul>
-        </div>
+  <h4 class="level-heading">Level 1 — Foundations</h4>
+  <p>Students follow an <strong>11-week program</strong> focusing on:</p>
+  <ul class="modern-list">
+    <li><strong>Basic Theory:</strong> Understanding the structure of compositions.</li>
+    <li><strong>Vocal Technique:</strong> Warmups and pitch accuracy.</li>
+    <li><strong>Showcase:</strong> Live performance for families and peers.</li>
+  </ul>
+  <h4 class="level-heading">Level 2 — Intermediate <span class="new-tag">New!</span></h4>
+  <p>
+    For students who have completed Level 1, or have basic Carnatic training from outside
+    the club. <em>[Add 1–2 lines here on what Level 2 covers.]</em>
+  </p>
+</div>
       </div>
     </section>
   </main>
@@ -216,6 +228,12 @@
       });
     });
 
+	  document.getElementById('level2-link').addEventListener('click', () => {
+  const header = document.getElementById('curriculum');
+  const panel = header.nextElementSibling;
+  if (!panel.classList.contains('open')) header.click();
+});
+	  
 	  // Carousel Logic
 const container = document.getElementById('carouselContainer');
 const slides = container.querySelectorAll('img');
