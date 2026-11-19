@@ -172,6 +172,11 @@
   .person.is-instructor .avatar{border-color:var(--green)}
   .person.is-co .avatar{border-color:var(--cyan)}
   .person strong{font-size:1.02rem;font-weight:800;line-height:1.3}
+  /* Uniform instructor boxes: reserve the same two-line height for every
+     name and school line, so all instructor cards come out exactly the
+     same size no matter how their text wraps. */
+  .person:not(.is-founder) strong{min-height:2.6em;display:flex;align-items:flex-start;justify-content:center}
+  .person:not(.is-founder) .p-school{min-height:2.7em}
   .person .p-role{font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--navy)}
   .person .p-school{font-size:.78rem;color:var(--ink-soft);line-height:1.35}
   /* Highlighted founder: team intro at the top */
@@ -333,6 +338,10 @@
     .person strong{font-size:.92rem}
     .person .p-school{font-size:.74rem}
     .person.is-founder{
+      /* Founder takes the full row on phones: sharing a row with the taller
+         founder card was stretching the instructor beside her (Meenakshi)
+         taller than every other instructor box. */
+      grid-column:1/-1;
       width:auto;margin-top:0;
       padding:1rem .9rem 1.05rem;
     }
@@ -422,7 +431,7 @@
         </div>
         <div class="level2-banner ragas-banner">
           <span class="new-pill event-pill">Recital</span>
-          <p><strong>Rising Ragas, our first district recital:</strong> <strong>Fri, March 5, 2027</strong>, Northshore Performing Arts Center, Bothell HS.</p>
+          <p><strong>Rising Ragas recital:</strong> <strong>Fri, Mar 5, 2027</strong> · NPAC, Bothell HS.</p>
         </div>
         <div class="hero-stats">
           <div class="stat"><b>120+</b><span>Students</span></div>
