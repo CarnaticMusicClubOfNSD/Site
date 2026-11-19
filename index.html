@@ -109,6 +109,9 @@
     letter-spacing:.12em;text-transform:uppercase;padding:.28rem .6rem;border-radius:999px;margin-top:.15rem;
   }
   @media (prefers-color-scheme: dark){ .new-pill{color:#001b33} }
+  .ragas-banner{margin-top:.7rem;background:var(--cyan-soft)}
+  .event-pill{background:var(--navy);color:#fff}
+  @media (prefers-color-scheme: dark){ .event-pill{color:#001b33} }
   .hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem;margin-top:1.6rem;max-width:32rem}
   .stat{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:.9rem 1rem;box-shadow:var(--shadow)}
   .stat b{font-family:"Source Serif 4",serif;font-size:1.65rem;font-weight:700;display:block;line-height:1.1;color:var(--navy)}
@@ -225,16 +228,6 @@
   .tag-new{background:var(--green-bright);color:#001b33}
   @media (prefers-color-scheme: dark){ .tag-new{color:#001b33} }
 
-  /* Recital strip */
-  .recital{
-    margin-top:1.6rem;border-radius:var(--radius);padding:1.4rem 1.6rem;
-    background:linear-gradient(120deg,#001b33,#00507e);
-    color:#eaf6ff;display:flex;flex-wrap:wrap;gap:1rem 2rem;align-items:center;justify-content:space-between;
-  }
-  .recital h3{font-family:"Source Serif 4",serif;font-size:1.3rem;font-weight:600}
-  .recital p{font-size:.94rem;opacity:.92;max-width:36rem}
-  .recital .when{font-weight:800;white-space:nowrap;font-size:.95rem}
-
   /* Team */
   .team-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(215px,100%),1fr));gap:1.1rem}
   .member{
@@ -346,13 +339,10 @@
     .goals{padding:1.2rem 1.15rem}
     .goals li{font-size:.93rem}
 
-    /* Schools + recital */
+    /* Schools */
     .school-grid{gap:.8rem}
     .school-card{padding:1.1rem 1.1rem;border-radius:14px}
     .instructor-name{white-space:normal}
-    .recital{padding:1.2rem 1.15rem;gap:.7rem;flex-direction:column;align-items:flex-start}
-    .recital h3{font-size:1.18rem;line-height:1.3}
-    .recital .when{white-space:normal;font-size:.92rem}
 
     /* Team cards: two per row so photos don't dominate the scroll */
     .team-grid{grid-template-columns:1fr 1fr;gap:.8rem}
@@ -422,6 +412,10 @@
         <div class="level2-banner">
           <span class="new-pill">New</span>
           <p><strong>Level 2 training is now open</strong> for returning students ready for the next step. <a href="#curriculum">See the curriculum</a></p>
+        </div>
+        <div class="level2-banner ragas-banner">
+          <span class="new-pill event-pill">Recital</span>
+          <p><strong>Rising Ragas — our first district recital:</strong> students from all six schools take the stage together on <strong>Friday, March 5, 2027 · 7:00 PM</strong> at the Northshore Performing Arts Center at Bothell High School.</p>
         </div>
         <div class="hero-stats">
           <div class="stat"><b>120+</b><span>Students</span></div>
@@ -539,22 +533,22 @@
         <div class="school-card">
           <span class="school-tag tag-home">Where it began · 2022</span>
           <h3>Canyon Creek Elementary</h3>
-          <p>The club's first home, where the program launched as an after-school class. Taught by instructor <span class="instructor-name">Satvik Tadiparti</span>.</p>
+          <p>The club's first home, where the program launched as an after-school class. Taught by <span class="instructor-name">Shreya Battula</span> and <span class="instructor-name">Satvik Tadiparti</span>.</p>
         </div>
         <div class="school-card">
           <span class="school-tag tag-home">Established</span>
           <h3>Fernwood Elementary</h3>
-          <p>Taught by instructor <span class="instructor-name">Meenakshi Eashwar</span> with co-instructor <span class="instructor-name">Nayana Surisetty</span>.</p>
+          <p>Taught by <span class="instructor-name">Meenakshi Eashwar</span> with <span class="instructor-name">Nayana Surisetty</span>.</p>
         </div>
         <div class="school-card">
           <span class="school-tag tag-home">Established</span>
           <h3>Maywood Hills Elementary</h3>
-          <p>Taught by instructor <span class="instructor-name">Sohan Vaddi</span>.</p>
+          <p>Taught by <span class="instructor-name">Sohan Vaddi</span>.</p>
         </div>
         <div class="school-card">
           <span class="school-tag tag-home">Established</span>
           <h3>Kokanee Elementary</h3>
-          <p>Taught by instructor <span class="instructor-name">Aditi Prasad</span>.</p>
+          <p>Taught by <span class="instructor-name">Aditi Prasad</span>.</p>
         </div>
         <div class="school-card">
           <span class="school-tag tag-new">New school</span>
@@ -566,13 +560,6 @@
           <h3>Moorlands Elementary</h3>
           <p>Recently joined the club — classes are being set up for new students.</p>
         </div>
-      </div>
-      <div class="recital">
-        <div>
-          <h3>Rising Ragas — our first district recital</h3>
-          <p>Students from all six schools take the stage together at the Northshore Performing Arts Center at Bothell High School.</p>
-        </div>
-        <div class="when">Friday, March 5, 2027 · 7:00 PM</div>
       </div>
     </div>
   </section>
